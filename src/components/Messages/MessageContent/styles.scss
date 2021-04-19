@@ -1,0 +1,20 @@
+@import '../../../styles/variables';
+
+$message-content-gap: ($default-gap / 2);
+$message-content-margin: (-$message-content-gap / 2) ($default-gap / 2);
+
+.message-content {
+	display: flex;
+	flex-direction: column;
+
+	margin: $message-content-margin;
+	align-items: flex-start;
+
+	> * {
+		margin: ($message-content-gap / 2) 0;
+	}
+
+	&--reverse {
+		align-items: flex-end;
+	}
+}
